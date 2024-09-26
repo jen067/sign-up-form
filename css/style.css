@@ -1,0 +1,151 @@
+:root{
+    /* Colors */
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal--Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Font */
+    --fz: 16px;
+    --Roboto: "Roboto", sans-serif;
+}
+
+.flow> * + *{
+    margin-top: 1.5rem;
+}
+
+p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: var(--fz);
+    font-family: var(--Roboto);
+    background-color: var(--Dark-Slate-Grey);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "img"
+        "txt"
+    ;
+    gap: 2.5rem;
+    background-color: #fff;
+    max-width: 60rem;
+}
+
+.img-wrapper{
+    width: 100%;
+}
+
+.img-wrapper img{
+    width: 100%;
+}
+
+main section:first-child{
+    grid-area: img;
+}
+
+main section:last-child{
+    grid-area: txt;
+}
+
+.txt-wrapper{
+    padding-inline: 1rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.maintitle{
+    font-size: 3rem;
+}
+
+.lists> * + *{
+    margin-top: 1rem;
+}
+
+.list{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.label-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.label{
+    font-weight: 700;
+}
+
+.valid-txt{
+    color: var(--Tomato);
+    font-weight: 500;
+    visibility: hidden;
+}
+
+#email{
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    color: var(--Grey);
+    opacity: .8;
+}
+
+#email:focus{
+    outline: none;
+}
+
+.btn{
+    width: 100%;
+    background-color: var(--Dark-Slate-Grey);
+    border-radius: 5px;
+    color: #fff;
+    padding: 1.5rem;
+    font-weight: 500;
+    border: none;
+}
+
+.btn:hover{
+    background: linear-gradient(270deg, #FF644B,#F24F6F);
+    box-shadow: 0 20px 30px #ff634b9c;
+}
+
+@media screen and (min-width:35rem) {
+    .flow> * + *{
+        margin-top: 2rem;
+    }
+
+    body{
+        padding: 2rem
+    }
+    main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "txt img"
+    ;
+        padding: 1.5rem;
+        border-radius: 20px;
+        align-items: center;
+        gap: 2rem;
+    }
+    .txt-wrapper{
+        padding: 1rem;
+        margin-bottom: 0;
+    }
+
+}
