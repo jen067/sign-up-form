@@ -24,12 +24,9 @@ p{
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     font-size: var(--fz);
     font-family: var(--Roboto);
-    background-color: var(--Dark-Slate-Grey);
 }
 
 main{
@@ -41,7 +38,7 @@ main{
     ;
     gap: 2.5rem;
     background-color: #fff;
-    max-width: 60rem;
+    max-width: 55rem;
 }
 
 .img-wrapper{
@@ -113,7 +110,7 @@ main section:last-child{
 .btn{
     width: 100%;
     background-color: var(--Dark-Slate-Grey);
-    border-radius: 5px;
+    border-radius: 8px;
     color: #fff;
     padding: 1.5rem;
     font-weight: 500;
@@ -125,13 +122,16 @@ main section:last-child{
     box-shadow: 0 20px 30px #ff634b9c;
 }
 
-@media screen and (min-width:35rem) {
+@media (width > 40rem) {
     .flow> * + *{
         margin-top: 2rem;
     }
 
     body{
-        padding: 2rem
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background-color: var(--Dark-Slate-Grey);
     }
     main{
         grid-template-columns: 1fr 1fr;
