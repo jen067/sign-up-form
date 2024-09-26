@@ -95,7 +95,7 @@ main section:last-child{
 
 #email{
     width: 100%;
-    padding: 1.5rem;
+    padding: 1em;
     border: 1px solid var(--Grey);
     border-radius: 5px;
     margin-bottom: 1.5rem;
@@ -103,16 +103,12 @@ main section:last-child{
     opacity: .8;
 }
 
-#email:focus{
-    outline: none;
-}
-
 .btn{
     width: 100%;
     background-color: var(--Dark-Slate-Grey);
     border-radius: 8px;
     color: #fff;
-    padding: 1.5rem;
+    padding: 1em 3rem;
     font-weight: 500;
     border: none;
 }
