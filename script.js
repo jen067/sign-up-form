@@ -7,6 +7,7 @@ function styleChange() {
     email.style.backgroundColor = "#fff";
     email.style.color = "black";
     btn.forEach((e) => {
+      e.removeEventListener("click", btnClick); // 防止重複綁定
       e.addEventListener("click", btnClick);
     });
   } else {
@@ -16,10 +17,15 @@ function styleChange() {
     email.style.borderColor = "hsl(4, 100%, 67%)";
     email.style.backgroundColor = "hsl(355, 100%, 93%)";
     email.style.color = "hsl(4, 100%, 67%)";
+
+    btn.forEach((e) => {
+      e.removeEventListener("click", btnClick); // 移除事件
+    });
   }
 }
 
 function btnClick() {
+  console.log("btn click");
   if (main.classList.contains("visible")) {
     main.classList.remove("visible");
     vertified.classList.add("visible");
