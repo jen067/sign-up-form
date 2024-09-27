@@ -74,20 +74,35 @@
               id="email"
               placeholder="email@company.com"
             />
-            <button class="btn">Subscribe to monthly newsletter</button>
+            <input
+              type="button"
+              class="btn"
+              value="Subscribe to monthly newsletter"
+            />
           </form>
           <!-- Sign-up form end -->
         </div>
       </section>
       <!-- txt-wrapper End -->
     </main>
-    <script src="script.js"></script>
     <!-- Success message start -->
-
-    <!-- Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
-
+    <section class="vertified visible">
+      <div class="card flow">
+        <img src="assets/images/icon-list.svg" alt="icon-list" />
+        <h1 class="vertified-title">Thanks for subscribing!</h1>
+        <p class="vertified-txt">
+          A confirmation email has been sent to
+          <span class="bold-txt">ash@loremcompany.com.</span> Please open it and
+          click the button inside to confirm your subscription.
+        </p>
+        <input
+          type="button"
+          class="btn vertified-btn"
+          value="Dismiss message"
+        />
+      </div>
+    </section>
     <!-- Success message end -->
+    <script src="script.js"></script>
   </body>
 </html>

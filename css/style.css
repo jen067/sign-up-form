@@ -21,12 +21,17 @@ p{
     line-height: 1.5;
 }
 
+.visible{
+    visibility: hidden;
+}
+
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-size: var(--fz);
     font-family: var(--Roboto);
+    position: relative;
 }
 
 main{
@@ -111,12 +116,45 @@ main section:last-child{
     padding: 1em 3rem;
     font-weight: 500;
     border: none;
+    cursor: pointer;
 }
 
 .btn:hover{
     background: linear-gradient(270deg, #FF644B,#F24F6F);
     box-shadow: 0 20px 30px #ff634b9c;
 }
+
+.vertified{
+    position: absolute;
+    padding: 6rem 1rem 1rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    max-width: 30rem;
+    padding: 3rem;
+}
+
+.card img{
+    width: 3.2rem;
+}
+
+.vertified-title{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.bold-txt{
+    font-weight: 700;
+}
+
+.vertified-btn{
+    margin-top: 10rem;
+}
+
 
 @media (width > 40rem) {
     .flow> * + *{
@@ -142,6 +180,22 @@ main section:last-child{
     .txt-wrapper{
         padding: 1rem;
         margin-bottom: 0;
+    }
+
+    .vertified{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        height: auto;
+        padding: 0;
+    }
+
+    .card{
+        border-radius: 25px;
+    }
+
+    .vertified-btn{
+        margin-top: 1.5rem;
     }
 
 }
